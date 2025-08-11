@@ -262,6 +262,12 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Anda bisa menggunakan @layer components atau @layer utilities */
+@layer utilities {
+  #toggle:checked ~ label .toggle-circle {
+    @apply translate-x-5;
+  }
+}
 @utility navbar-fixed {
   position: fixed;
   z-index: 99; 
@@ -283,3 +289,5 @@
   transform: rotate(-45deg) translate(5px, -5px); 
   transform-origin: center;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
