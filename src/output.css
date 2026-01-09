@@ -34,7 +34,8 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-white: #fff;
-    --color-primary: oklch(0.704 0.14 182.503);
+    --color-primary: #FF5555;
+    --color-red-600: oklch(0.577 0.245 27.325);
     --color-amber-50: oklch(0.987 0.022 95.277);
     --color-teal-400: oklch(0.777 0.152 181.912);
     --color-teal-500: oklch(0.704 0.14 182.503);
@@ -47,9 +48,6 @@
     --color-slate-700: oklch(0.372 0.044 257.287);
     --color-slate-800: oklch(0.279 0.041 260.031);
     --color-slate-900: oklch(0.208 0.042 265.755);
-    --color-gray-700: oklch(0.373 0.034 259.733);
-    --color-gray-800: oklch(0.278 0.033 256.848);
-    --color-gray-900: oklch(0.21 0.034 264.665);
     --color-black: #000;
   }
 }
@@ -341,6 +339,12 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
+  .h-80 {
+    height: calc(var(--spacing) * 80);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
@@ -498,6 +502,9 @@
   }
   .border-slate-600 {
     border-color: var(--color-slate-600);
+  }
+  .bg-\[\#1F2937\] {
+    background-color: #1F2937;
   }
   .bg-primary {
     background-color: var(--color-primary);
@@ -740,10 +747,17 @@
   .hover\:bg-primary\/90 {
     &:hover {
       @media (hover: hover) {
-        background-color: color-mix(in srgb, oklch(0.704 0.14 182.503) 90%, transparent);
+        background-color: color-mix(in srgb, #FF5555 90%, transparent);
         @supports (color: color-mix(in lab, red, red)) {
           background-color: color-mix(in oklab, var(--color-primary) 90%, transparent);
         }
+      }
+    }
+  }
+  .hover\:bg-red-600 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-600);
       }
     }
   }
