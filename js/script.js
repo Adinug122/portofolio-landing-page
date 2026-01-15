@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
+ 
 
 const hamburgerMenu = document.querySelector('#hamburger-menu');
 const lines = hamburgerMenu.querySelectorAll('span');
